@@ -271,12 +271,12 @@ class FilamentSensorsRevolutions(octoprint.plugin.StartupPlugin,
                 current=self._plugin_version,
 
                 # update method: pip
-                pip="https://github.com/RomRider/Octoprint-Filament-Revolutions/archive/{target_version}.zip"
+                pip="https://github.com/katihh/Octoprint-Filament-Revolutions/archive/{target_version}.zip"
             )
         )
 
 
-__plugin_name__ = "Filament Sensors Revolutions"
+__plugin_name__ = "Image Processing Controller"
 __plugin_version__ = "1.0.0"
 
 
