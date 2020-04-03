@@ -120,7 +120,7 @@ class ComputerVision3dprinter(octoprint.plugin.StartupPlugin,
 
             jam_pin=-1,  # Default is no pin
             jam_bounce=250,  # Debounce 250ms
-            jam_switch=0,  # Normally Open
+            jam_switch=1,  # Normally Closed
             jammed_gcode='',
             jammed_pause_print=True,
 
