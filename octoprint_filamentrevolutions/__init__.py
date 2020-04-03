@@ -134,9 +134,6 @@ class ComputerVision3dprinter(octoprint.plugin.StartupPlugin,
 
     def runout_sensor_triggered(self):
         return self.runout_triggered
-			
-    def jam_sensor_triggered(self):
-        return self.jam_triggered
 
     def runout_sensor_enabled(self):
         return self.runout_pin != -1
