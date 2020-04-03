@@ -120,7 +120,7 @@ class ComputerVision3dprinter(octoprint.plugin.StartupPlugin,
 
             jam_pin=-1,  # Default is no pin
             jam_bounce=250,  # Debounce 250ms
-            jam_switch=1,  # Normally Closed
+            jam_switch=0,  # Normally Open
             jammed_gcode='',
             jammed_pause_print=True,
 
@@ -271,7 +271,7 @@ class ComputerVision3dprinter(octoprint.plugin.StartupPlugin,
                 current=self._plugin_version,
 
                 # update method: pip
-                pip="https://github.com/RomRider/Octoprint-Filament-Revolutions/archive/{target_version}.zip"
+                #pip="https://github.com/RomRider/Octoprint-Filament-Revolutions/archive/{target_version}.zip"
             )
         )
 
