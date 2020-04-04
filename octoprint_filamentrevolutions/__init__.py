@@ -122,7 +122,7 @@ class ComputerVision3dprinter(octoprint.plugin.StartupPlugin,
             jam_bounce=250,  # Debounce 250ms
             jam_switch=1,  # Normally Closed
             jammed_gcode='',
-            jamm_pause_print=True,
+            jammed_pause_print=True,
 
             mode=0,    # Board Mode
             send_gcode_only_once=False,  # Default set to False for backward compatibility
@@ -134,9 +134,6 @@ class ComputerVision3dprinter(octoprint.plugin.StartupPlugin,
 
     def runout_sensor_triggered(self):
         return self.runout_triggered
-			
-    def jam_sensor_triggered(self):
-        return self.jam_triggered
 
     def runout_sensor_enabled(self):
         return self.runout_pin != -1
