@@ -1,4 +1,4 @@
-<h4>{{ _('Computer Vision 3dpeinter') }}</h4>
+<h4>{{ _('Computer Vision 3dprinter') }}</h4>
 <form class="form-horizontal">
     <div class="control-group">
         <label class="control-label">{{ _('Board Pin Mode:') }}</label>
@@ -11,22 +11,22 @@
     </div>
 
     <div class="control-group">
-        <label class="control-label">{{ _('Underfill Sensor Pin:') }}</label>
+        <label class="control-label">{{ _('Runout Sensor Pin:') }}</label>
         <div class="controls" data-toggle="tooltip" title="{{ _('Which Raspberry Pi GPIO pin your switch is attached to (-1 disables the plugin)') }}">
-            <input type="number" step="any" min="0" class="input-mini text-right" data-bind="value: settings.plugins.filamentrevolutions.underfill_pin">
+            <input type="number" step="any" min="0" class="input-mini text-right" data-bind="value: settings.plugins.filamentrevolutions.runout_pin">
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label">{{ _('Underfill Sensor Debounce Time:') }}</label>
+        <label class="control-label">{{ _('Runout Sensor Debounce Time:') }}</label>
         <div class="controls" data-toggle="tooltip" title="{{ _('When a sensor state change happens, wait for this amount of time to wait for the signal to stabilize.') }}">
-            <input type="number" step="any" min="0" class="input-mini text-right" data-bind="value: settings.plugins.filamentrevolutions.underfill_bounce">
+            <input type="number" step="any" min="0" class="input-mini text-right" data-bind="value: settings.plugins.filamentrevolutions.runout_bounce">
             <span class="add-on">ms</span>
         </div>
     </div>
     <div class="control-group">
-        <label class="control-label">{{ _('Underfill Sensor Switch Type:') }}</label>
+        <label class="control-label">{{ _('Runout Sensor Switch Type:') }}</label>
         <div class="controls" data-toggle="tooltip" title="{{ _('Whether the sensor should trip when the switch goes HIGH or LOW, Normally Open is LOW when filament is present, and Normally Closed is HIGH when filament is present.') }}">
-            <select class="select-mini" data-bind="value: settings.plugins.filamentrevolutions.underfill_switch">
+            <select class="select-mini" data-bind="value: settings.plugins.filamentrevolutions.runout_switch">
                 <option value=0>{{ _('Normally Open') }}</option>
                 <option value=1>{{ _('Normally Closed') }}</option>
             </select>
@@ -35,13 +35,13 @@
     <div class="control-group">
         <label class="control-label">{{ _('Out of filament GCODE:') }}</label>
         <div class="controls">
-            <textarea rows="4" class="block" data-bind="value: settings.plugins.filamentrevolutions.underfilled_gcode"></textarea>
+            <textarea rows="4" class="block" data-bind="value: settings.plugins.filamentrevolutions.no_filament_gcode"></textarea>
         </div>
     </div>
     <div class="control-group">
         <div class="controls" data-toggle="tooltip" title="{{ _('Beware that for some printers, pausing is incompatible with M600 (Filament change pause) as both will move the print head and it can resume at a different position as it paused.') }}">
             <label class="checkbox">
-                <input type="checkbox" data-bind="checked: settings.plugins.filamentrevolutions.underfill_pause_print"> {{ _('Pause print when out of filament') }}
+                <input type="checkbox" data-bind="checked: settings.plugins.filamentrevolutions.runout_pause_print"> {{ _('Pause print when out of filament') }}
             </label>
         </div>
     </div>
