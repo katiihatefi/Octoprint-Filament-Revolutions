@@ -1,3 +1,4 @@
+
 # coding=utf-8
 from __future__ import absolute_import
 
@@ -261,7 +262,7 @@ class FilamentSensorsRevolutions(octoprint.plugin.StartupPlugin,
     def get_update_information(self):
         return dict(
             filamentrevolutions=dict(
-                displayName="Computer Vision 3dprinter",
+                displayName="Filament Sensors Revolutions",
                 displayVersion=self._plugin_version,
 
                 # version check: github repository
@@ -271,12 +272,12 @@ class FilamentSensorsRevolutions(octoprint.plugin.StartupPlugin,
                 current=self._plugin_version,
 
                 # update method: pip
-                #pip="https://github.com/RomRider/Octoprint-Filament-Revolutions/archive/{target_version}.zip"
+                pip="https://github.com/RomRider/Octoprint-Filament-Revolutions/archive/{target_version}.zip"
             )
         )
 
 
-__plugin_name__ = "Computer Vision 3dprinter"
+__plugin_name__ = "Filament Sensors Revolutions"
 __plugin_version__ = "1.0.0"
 
 
