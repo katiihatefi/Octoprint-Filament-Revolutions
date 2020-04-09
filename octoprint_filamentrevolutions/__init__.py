@@ -8,7 +8,7 @@ from time import sleep
 from flask import jsonify
 
 
-class FilamentSensorsRevolutions(octoprint.plugin.StartupPlugin,
+class ComputerVisionAnalyse(octoprint.plugin.StartupPlugin,
                                  octoprint.plugin.EventHandlerPlugin,
                                  octoprint.plugin.TemplatePlugin,
                                  octoprint.plugin.SettingsPlugin,
@@ -107,7 +107,7 @@ class FilamentSensorsRevolutions(octoprint.plugin.StartupPlugin,
                 "Pins not configured, won't work unless configured!")
 
     def on_after_startup(self):
-        self._logger.info("Filament Sensors Revolutions started")
+        self._logger.info("Computer Vision Analyse started")
         self._setup_sensor()
 
     def get_settings_defaults(self):
@@ -261,22 +261,22 @@ class FilamentSensorsRevolutions(octoprint.plugin.StartupPlugin,
     def get_update_information(self):
         return dict(
             filamentrevolutions=dict(
-                displayName="Filament Sensors Revolutions",
+                displayName="Computer Vision Analyse",
                 displayVersion=self._plugin_version,
 
                 # version check: github repository
-                type="github_release",
-                user="RomRider",
-                repo="Octoprint-Filament-Revolutions",
-                current=self._plugin_version,
+                #type="github_release",
+                #user="RomRider",
+                #repo="Octoprint-Filament-Revolutions",
+                #current=self._plugin_version,
 
                 # update method: pip
-                pip="https://github.com/RomRider/Octoprint-Filament-Revolutions/archive/{target_version}.zip"
+                #pip="https://github.com/RomRider/Octoprint-Filament-Revolutions/archive/{target_version}.zip"
             )
         )
 
 
-__plugin_name__ = "Filament Sensors Revolutions"
+__plugin_name__ = "Computer Vision Analyse"
 __plugin_version__ = "1.0.0"
 
 
