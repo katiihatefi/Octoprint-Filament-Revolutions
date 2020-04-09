@@ -282,7 +282,7 @@ __plugin_version__ = "1.0.0"
 
 def __plugin_load__():
     global __plugin_implementation__
-    __plugin_implementation__ = FilamentSensorsRevolutions()
+    __plugin_implementation__ = ComputerVisionAnalyse()
 
     global __plugin_hooks__
     __plugin_hooks__ = {
